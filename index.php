@@ -2,7 +2,7 @@
 // spl_autoload_register et fonction requireClass
 
 spl_autoload_register('requireClass'); 
-//on créé une pile d'autoload avec le spl_autoload_register = enregistre un nombre quelconque de chargeurs automatiques, ce qui permet aux classes et aux interfaces d'être automatiquement chargées si elles ne sont pas définies actuellement. Si vous devez utiliser plusieurs fonctions d'autochargement, la fonction spl_autoload_register() est faite pour cela. Elle crée une file d'attente de fonctions d'autochargement, et les exécute les unes après les autres, dans l'ordre où elles ont été définies. 
+//on créé une pile d'autoload (Tente de charger une classe indéfinie) avec le spl_autoload_register = enregistre un nombre quelconque de chargeurs automatiques, ce qui permet aux classes et aux interfaces d'être automatiquement chargées si elles ne sont pas définies actuellement. Si vous devez utiliser plusieurs fonctions d'autochargement, la fonction spl_autoload_register() est faite pour cela. Elle crée une file d'attente de fonctions d'autochargement, et les exécute les unes après les autres, dans l'ordre où elles ont été définies. 
 
 function requireClass($classe){
     require $classe .'.class'.'.php';
