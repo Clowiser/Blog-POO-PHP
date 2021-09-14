@@ -17,15 +17,13 @@ var_dump($merlin->mort()); // 1-A : retournera false si le personnage est vivant
 
 $arthur = new Personnage('Arthur', 100, 80, 50, 2); // on peut passer ses valeurs en tableau associatif
 
-var_dump($arthur->nom);
-
-$arthur->regenerer(5); // affiche 150
+$arthur->regenerer(5); // affiche 150 + 1-B pour regénérer Arhtur de +5
 
 var_dump($arthur->vie); // affiche 100
 
-$arthur->vie = 0; // arthur est mort var vie = 0
+// $arthur->vie = 0; // arthur est mort var vie = 0
 
-var_dump($arthur->mort()); // retournera true car vie arthur = 0
+// var_dump($arthur->mort()); // retournera true car vie arthur = 0
 
 
 

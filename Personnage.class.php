@@ -22,28 +22,18 @@ class Personnage{ // classe va contenir un ensemble d'attributs/propriétés et 
     public function crier(){
         echo 'Par la foudre du Destin !';
     }
- 
-    public function regenerer(){
-        // $this->vie = 150;
+    // 1-B :Modifier la méthode regenerer() pour pouvoir passer en paramètre le nombre de points de vie à regénérer -> regenerer($vie = null) prendra en apramètre le nombre de vie que l'on va rajouter
+    public function regenerer($vie = null){
+        if(is_null($vie)){
+            $this->vie = 150;
+        }else{
+            $this->vie = $this->vie +$vie;
+        }
     }
 
     public function mort(){
         return $this->vie == 0; // 1-A : retournera false si le personnage est vivant et true s'il est mort
     }
-
-
-    // // méthode pour déplacer le personnage = modifier sa localisation donc avec la propriété $localisation
-    // public function deplacer(){
-
-    // }
-
-    // // méthode pour frapper le personnages = suivant sa force -> $force
-    // public function frapper(){
-    // }
-
-    // // méthode pour augmenter l'attribut $experience du personnage
-    // public function gagnerXp(){
-    // }
 }
 
 // les attributs et méthodes ci-dessus appartiennent à l'objet $perso1 ou $perso2 (et les autre sque l'on peu créer) qui est l'instance de la class Personnage
